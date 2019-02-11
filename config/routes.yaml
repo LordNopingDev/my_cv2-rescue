@@ -4,3 +4,10 @@
 #index:
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
+app_cv1:
+    path: /cv1/{name}
+    controller: App\Controller\cv1Controller::number
+    
+app_CthulhuCV:
+    path: /cv2/{name}
+    controller: App\Controller\CthulhuCVController::number
