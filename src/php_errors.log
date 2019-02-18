@@ -1,1 +1,14 @@
 [04-Feb-2019 08:07:50 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/cv1Controller.php on line 9
+[11-Feb-2019 15:19:18 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:44 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:46 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:46 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:47 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:47 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:29:47 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:31:59 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:44:08 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/CompetencesController.php on line 16
+[11-Feb-2019 15:44:13 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/ExperienceController.php on line 16
+[11-Feb-2019 15:44:19 UTC] PHP Fatal error:  Class 'Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository' not found in /home/ubuntu/workspace/my_cv/src/Repository/CompetencesRepository.php on line 15
+[11-Feb-2019 15:54:52 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9
+[11-Feb-2019 15:54:54 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/IndexController.php on line 9

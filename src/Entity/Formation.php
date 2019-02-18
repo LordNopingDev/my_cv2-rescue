@@ -2,101 +2,126 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\FormationRepository")
- * @ORM\Table(name="app_formation")
  */
 class Formation
 {
-
     /**
-     * @ORM\Id
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue (strategy="AUTO")
      */
-    protected $id;
-    
+    private $id;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
-    
+
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     private $dateDebut;
-    
+
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     private $dateFin;
-    
+
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $lieu;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $etablissement;
     
     /**
-     * @ORM\Column(type="text", nullable=true)
-    */
-    private $commentaire;
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
 
-    
     public function getId(): ?int
     {
         return $this->id;
     }
-    
-     public function getName(): ?string
+
+    public function getName(): ?string
     {
         return $this->name;
     }
+
     public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
-    
+
     public function getDateDebut(): ?\DateTimeInterface
     {
         return $this->dateDebut;
     }
+
     public function setDateDebut(\DateTimeInterface $dateDebut): self
     {
         $this->dateDebut = $dateDebut;
+
         return $this;
     }
+
     public function getDateFin(): ?\DateTimeInterface
     {
         return $this->dateFin;
     }
+
     public function setDateFin(\DateTimeInterface $dateFin): self
     {
         $this->dateFin = $dateFin;
-        return $this;
-    }
-    
-     public function getLieu(): ?string
-    {
-        return $this->lieu;
-    }
-    public function setLieu(string $lieu): self
-    {
-        $this->lieu = $lieu;
-        return $this;
-    }
-    
-      public function getCommentaire(): ?string
-    {
-        return $this->commentaire;
-    }
-    public function setCommentaire(?string $commentaire): self
-    {
-        $this->commentaire = $commentaire;
+
         return $this;
     }
 
+    public function getLieu(): ?string
+    {
+        return $this->lieu;
+    }
+
+    public function setLieu(string $lieu): self
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    public function getEtablissement(): ?string
+    {
+        return $this->etablissement;
+    }
+
+    public function setEtablissement(string $etablissement): self
+    {
+        $this->etablissement = $etablissement;
+
+        return $this;
+    }
     
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 }

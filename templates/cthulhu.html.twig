@@ -29,7 +29,7 @@
                 
         <div id="objective">
             <p>
-                I am an outgoing and energetic (ask anybody) young professional, seeking a 
+                I am an outgoing and energetic! (ask anybody) young professional, seeking a 
                 career that fits my professional skills, personality, and murderous tendencies. 
                 My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
                 I can bring world domination to your organization. 
@@ -38,19 +38,35 @@
         
         <div class="clear"></div>
         
+        <div id="buttons" style="position:absolute; height:50%; width:50px; align:right;"></div>
+        
         <dl>
             <dd class="clear"></dd>
             
-            <dt>Education</dt>
+            <dt>Education 
+                <br/> 
+                    <span class="buttoncontainer">
+                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('formation_new')}} '"><span>New</span></button>
+                    </span>
+            </dt>
             <dd>
-                <h2>Withering Madness University - Planet Vhoorl</h2>
-                <p><strong>Major:</strong> Public Relations<br />
+                <h2>Withering Madness University - Planet Vhoorl</h2> 
+                <p><strong>Major:</strong> Public Relations<br /> 
                    <strong>Minor:</strong> Scale Tending</p>
+                        <dd class="buttoncontainer">
+                           <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                           <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
+                        </dd>
             </dd>
             
             <dd class="clear"></dd>
             
-            <dt>Skills</dt>
+            <dt>Skills
+            <br/> 
+                    <span class="buttoncontainer">
+                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('competences_new')}} '"><span>New</span></button>
+                    </span>
+            </dt>
             <dd>
                 <h2>Office skills</h2>
                 <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
@@ -61,7 +77,12 @@
             
             <dd class="clear"></dd>
             
-            <dt>Experience</dt>
+            <dt>Experience
+            <br/> 
+                    <span class="buttoncontainer">
+                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('experience_new')}} '"><span>New</span></button>
+                    </span>
+            </dt>
             <dd>
                 <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
                 <ul>
@@ -80,12 +101,24 @@
             
             <dd class="clear"></dd>
             
-            <dt>Hobbies</dt>
-            <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
+            <dt>Hobbies
+            <br/> 
+                    <span class="buttoncontainer">
+                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('loisir_new')}} '"><span>New</span></button>
+                    </span>
+            </dt>
+            <dd>World Domination</dd>
+            <dd>Deep Sea Diving</dd>
+            <dd>Murder Most Foul</dd>
             
             <dd class="clear"></dd>
             
-            <dt>References</dt>
+            <dt>References
+            <br/> 
+                    <span class="buttoncontainer">
+                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=''"><span>New</span></button>
+                    </span>
+            </dt>
             <dd>Available on request</dd>
             
             <dd class="clear"></dd>
