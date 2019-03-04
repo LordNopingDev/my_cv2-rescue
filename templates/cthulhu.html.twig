@@ -17,7 +17,7 @@
     
         <div id="contact-info" class="vcard">
         
-            <!-- Microformats! -->
+            <!-- Microformats!!! -->
          <!-- --------------------------------------------------------------------------------------------------- -->
             
         {% for personalinfo in personalinfos %}
@@ -59,10 +59,10 @@
                 <dd>
                     <h2>{{ formation.getName() }} - {{ formation.getEtablissement }} - {{ formation.getLieu() }}</h2> 
                     <p>{{ formation.getDescription() }}</p>
-                        <dd class="buttoncontainer">
-                            <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
-                            <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
-                        </dd>
+                        <div class="buttoncontainer">
+                            <button class="animatedbutton" id="edbutton" type="button" onClick="MyWindow=window.open(' {{path('formation_edit', {id: formation.getId() })}} ','popup','width=600,height=600'); return false;"><span>Edit</span></button>
+                            <button id="delbutton" type="button" onClick="MyWindow=window.open(' {{path('formation_delete', {id: formation.getId() })}} ','popup','width=600,height=600'); return false;"><span>Delete</span></button>
+                        </div>
                 </dd>
             {% endfor %}
             
@@ -80,10 +80,10 @@
             <dd>
                 <h2>{{ competence.getCompetence() }}</h2>
                 <p>{{ competence.getDescription() }}</p>
-                    <dd class="buttoncontainer">
-                        <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
-                        <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
-                    </dd>
+                    <div class="buttoncontainer">
+                        <button class="animatedbutton" id="edbutton" type="button" onClick="MyWindow=window.open(' {{path('competence_edit', {id: competence.getId() })}} ','popup','width=600,height=600'); return false;"><span>Edit</span></button>
+                        <button id="delbutton" type="button" onClick="MyWindow=window.open(' {{path('competence_delete', {id: competence.getId() })}} ','popup','width=600,height=600'); return false;"><span>Delete</span></button>
+                    </div>
             </dd>
             {% endfor %}
             
@@ -101,10 +101,10 @@
                 {% for experience in experiences %}
                 <h2>{{ experience.getEtablissement() }}<span>{{ experience.getPoste() }} - {{ experience.getLieu() }} - {{ experience.getDateDebut|date("m/d/Y") }} - {{ experience.getDateFin|date("m/d/Y") }}</span></h2>
                 <p>{{ experience.getDescription() }}</p>
-                    <dd class="buttoncontainer">
-                        <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
-                        <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
-                    </dd>
+                    <div class="buttoncontainer">
+                        <button class="animatedbutton" id="edbutton" type="button" onClick="MyWindow=window.open(' {{path('experience_edit', {id: experience.getId() })}} ','popup','width=600,height=600'); return false;"><span>Edit</span></button>
+                        <button id="delbutton" type="button" onClick="MyWindow=window.open(' {{path('experience_delete', {id: experience.getId() })}} ','popup','width=600,height=600'); return false;"><span>Delete</span></button>
+                    </div>
                 {% endfor %}
             </dd>
             
@@ -122,10 +122,10 @@
             {% for loisir in loisirs %}
             <dd>
                 {{ loisir.getLoisir() }} : {{ loisir.getDescriptionLoisir() }}
-                <dd class="buttoncontainer">
-                    <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
-                    <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
-                </dd>
+                <div class="buttoncontainer">
+                    <button class="animatedbutton" id="edbutton" type="button" onClick="MyWindow=window.open(' {{path('loisir_edit', {id: loisir.getId() })}} ','popup','width=600,height=600'); return false;"><span>Edit</span></button>
+                    <button id="delbutton" type="button" onClick="MyWindow=window.open(' {{path('loisir_delete', {id: loisir.getId() })}} ','popup','width=600,height=600'); return false;"><span>Delete</span></button>
+                </div>
             
             </dd>
             

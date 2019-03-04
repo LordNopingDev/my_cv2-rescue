@@ -96,3 +96,7 @@ dd.clear { float: none; margin: 0; height: 15px; }
 #formation_container {
   margin-bottom:50px;
 }
+
+.buttoncontainer {
+  margin-bottom:15px;
+}
