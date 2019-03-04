@@ -32,7 +32,7 @@ class Personalinfo
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=2500)
      */
     private $presentation;
 

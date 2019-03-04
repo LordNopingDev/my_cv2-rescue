@@ -18,23 +18,27 @@
         <div id="contact-info" class="vcard">
         
             <!-- Microformats! -->
+         <!-- --------------------------------------------------------------------------------------------------- -->
+            
+        {% for personalinfo in personalinfos %}
         
-            <h1 class="fn">{{ name }}</h1>
+            <h1 class="fn">{{ personalinfo.getName() }} 
+                <span class="buttoncontainer">
+                    <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                </span>
+            </h1> 
         
             <p>
-                Cell: <span class="tel">555-666-7777</span><br />
-                Email: <a class="email" href="mailto:greatoldone@lovecraft.com">greatoldone@lovecraft.com</a>
+                Cell: <span class="tel">{{ personalinfo.getPhone() }}</span><br />
+                Email: <a class="email" href="mailto:{{ personalinfo.getEmail() }}">{{ personalinfo.getEmail() }}</a>
             </p>
         </div>
                 
         <div id="objective">
-            <p>
-                I am an outgoing and energetic! (ask anybody) young professional, seeking a 
-                career that fits my professional skills, personality, and murderous tendencies. 
-                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
-                I can bring world domination to your organization. 
-            </p>
+            <p>{{ personalinfo.getPresentation() }}</p>
         </div>
+        
+        {% endfor %}
         
         <div class="clear"></div>
         
@@ -42,82 +46,94 @@
         
         <dl>
             <dd class="clear"></dd>
+        
+        <!-- --------------------------------------------------------------------------------------------------- -->
             
             <dt>Education 
-                <br/> 
-                    <span class="buttoncontainer">
-                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('formation_new')}} '"><span>New</span></button>
-                    </span>
+            <br/> 
+                <span class="buttoncontainer">
+                    <button class="animatedbutton" id="newbutton" type="button" onClick="MyWindow=window.open(' {{path('formation_new')}} ','popup','width=600,height=600'); return false;"><span>New</span></button>
+                </span>
             </dt>
-            <dd>
-                <h2>Withering Madness University - Planet Vhoorl</h2> 
-                <p><strong>Major:</strong> Public Relations<br /> 
-                   <strong>Minor:</strong> Scale Tending</p>
+            {% for formation in formations %}
+                <dd>
+                    <h2>{{ formation.getName() }} - {{ formation.getEtablissement }} - {{ formation.getLieu() }}</h2> 
+                    <p>{{ formation.getDescription() }}</p>
                         <dd class="buttoncontainer">
-                           <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
-                           <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
+                            <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                            <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
                         </dd>
-            </dd>
+                </dd>
+            {% endfor %}
             
             <dd class="clear"></dd>
+            
+            <!-- --------------------------------------------------------------------------------------------------- -->
             
             <dt>Skills
             <br/> 
-                    <span class="buttoncontainer">
-                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('competences_new')}} '"><span>New</span></button>
-                    </span>
+                <span class="buttoncontainer">
+                    <button class="animatedbutton" id="newbutton" type="button" onClick="MyWindow=window.open(' {{path('competence_new')}} ','popup','width=600,height=600'); return false;"><span>New</span></button>
+                </span>
             </dt>
+            {% for competence in competences %}
             <dd>
-                <h2>Office skills</h2>
-                <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
-                
-                <h2>Computer skills</h2>
-                <p>Microsoft productivity software (Word, Excel, etc), Adobe Creative Suite, Windows</p>
+                <h2>{{ competence.getCompetence() }}</h2>
+                <p>{{ competence.getDescription() }}</p>
+                    <dd class="buttoncontainer">
+                        <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                        <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
+                    </dd>
             </dd>
+            {% endfor %}
             
             <dd class="clear"></dd>
+            
+            <!-- --------------------------------------------------------------------------------------------------- -->
             
             <dt>Experience
             <br/> 
-                    <span class="buttoncontainer">
-                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('experience_new')}} '"><span>New</span></button>
-                    </span>
+                <span class="buttoncontainer">
+                    <button class="animatedbutton" id="newbutton" type="button" onClick="MyWindow=window.open(' {{path('experience_new')}} ','popup','width=600,height=600'); return false;"><span>New</span></button>
+                </span>
             </dt>
             <dd>
-                <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
-                <ul>
-                    <li>Inspired and won highest peasant death competition among servants</li>
-                    <li>Helped coordinate managers to grow cult following</li>
-                    <li>Provided untimely deaths to all who opposed</li>
-                </ul>
-                
-                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
-                <ul>
-                    <li>Worked on grass-roots promotional campaigns</li>
-                    <li>Reduced theft and property damage percentages</li>
-                    <li>Janitorial work, Laundry</li>
-                </ul> 
+                {% for experience in experiences %}
+                <h2>{{ experience.getEtablissement() }}<span>{{ experience.getPoste() }} - {{ experience.getLieu() }} - {{ experience.getDateDebut|date("m/d/Y") }} - {{ experience.getDateFin|date("m/d/Y") }}</span></h2>
+                <p>{{ experience.getDescription() }}</p>
+                    <dd class="buttoncontainer">
+                        <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                        <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
+                    </dd>
+                {% endfor %}
             </dd>
             
             <dd class="clear"></dd>
             
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            
             <dt>Hobbies
             <br/> 
-                    <span class="buttoncontainer">
-                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=' {{path('loisir_new')}} '"><span>New</span></button>
-                    </span>
+                <span class="buttoncontainer">
+                    <button class="animatedbutton" id="newbutton" type="button" onClick="MyWindow=window.open(' {{path('loisir_new')}} ','popup','width=600,height=600'); return false;"><span>New</span></button>
+                </span>
             </dt>
-            <dd>World Domination</dd>
-            <dd>Deep Sea Diving</dd>
-            <dd>Murder Most Foul</dd>
+            
+            {% for loisir in loisirs %}
+            <dd>
+                {{ loisir.getLoisir() }} : {{ loisir.getDescriptionLoisir() }}
+                <dd class="buttoncontainer">
+                    <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                    <button id="delbutton" type="button" onclick="window.location.href=''"><span>Delete</span></button>
+                </dd>
+            
+            </dd>
+            
+            {% endfor %}
             
             <dd class="clear"></dd>
             
             <dt>References
-            <br/> 
-                    <span class="buttoncontainer">
-                        <button class="animatedbutton" id="newbutton" type="button" onclick="window.location.href=''"><span>New</span></button>
-                    </span>
             </dt>
             <dd>Available on request</dd>
             

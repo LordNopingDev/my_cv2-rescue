@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\CompetencesRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CompetenceRepository")
  */
-class Competences
+class Competence
 {
     /**
      * @ORM\Id()
@@ -19,33 +19,16 @@ class Competences
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $competence;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $competence_description;
+    private $description;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
     }
 
     public function getCompetence(): ?string
@@ -60,14 +43,14 @@ class Competences
         return $this;
     }
 
-    public function getCompetenceDescription(): ?string
+    public function getDescription(): ?string
     {
-        return $this->competence_description;
+        return $this->description;
     }
 
-    public function setCompetenceDescription(?string $competence_description): self
+    public function setDescription(?string $description): self
     {
-        $this->competence_description = $competence_description;
+        $this->description = $description;
 
         return $this;
     }

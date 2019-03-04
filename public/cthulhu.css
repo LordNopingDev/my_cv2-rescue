@@ -92,3 +92,7 @@ dd.clear { float: none; margin: 0; height: 15px; }
   opacity: 1;
   right: 0;
 }
+
+#formation_container {
+  margin-bottom:50px;
+}
