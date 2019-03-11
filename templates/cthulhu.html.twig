@@ -24,7 +24,7 @@
         
             <h1 class="fn">{{ personalinfo.getName() }} 
                 <span class="buttoncontainer">
-                    <button class="animatedbutton" id="edbutton" type="button" onclick="window.location.href='  '"><span>Edit</span></button>
+                    <button class="animatedbutton" id="edbutton" type="button" onClick="MyWindow=window.open(' {{path('personalinfo_edit', {id: personalinfo.getId() })}} ','popup','width=600,height=600'); return false;"><span>Edit</span></button>
                 </span>
             </h1> 
         
